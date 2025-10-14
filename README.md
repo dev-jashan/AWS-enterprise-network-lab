@@ -29,7 +29,20 @@ Enterprise network simulation demonstrating:
 
 ![VPC Flow Screenshot](./screenshots/aws-console/ascii-art-image.png)
 
+# 🖥️ AWS EC2 Instances Setup
 
+As part of this project, three EC2 instances were created in the AWS console to simulate a segmented network environment. Each instance serves a different purpose and resides in a designated subnet.
+
+### Instances Overview
+
+| Instance Name | Purpose | Network Zone | Description |
+|----------------|----------|---------------|--------------|
+| **mgmt** | Management Server | Management Subnet | Used for administrative access and centralized management of other instances. |
+| **dmz** | Web/DMZ Server | DMZ Subnet | Exposed to the internet to host public-facing applications or web services. |
+| **hr** | Internal Application Server | Internal Subnet | Hosts HR or internal business applications not directly accessible from the internet. |
+
+![DMZinstance](./screenshots/aws-console/DMZ-instance.png)
+![HR-instance](./screenshots/aws-console/HR-instance.png)
 ## 🔒 Security Implementation
 
 ## Security Groups
@@ -60,15 +73,19 @@ Enterprise network simulation demonstrating:
 ![Management to HR](./screenshots/testing/Mgmt-HR.png)
 ![Management to DMZ](./screenshots/testing/Mgmt-DMZ.png)
 
+## 🌐 Web Application Deployment
 
+### Apache Web Server in DMZ
+
+A functional web server was deployed in the DMZ subnet to demonstrate public-facing infrastructure:
+![DMZ web page](./screenshots/aws-console/DMZ-Web.png)
 
 ## 🎯 Key Achievements
 
 ✅ Enterprise-grade VPC with proper CIDR allocation  
 ✅ Multi-layer security (Security Groups + NACLs)  
-✅ Zero-trust architecture with bastion host  
 ✅ Department isolation preventing lateral movement  
-✅ 100% security test pass rate  
+  
 
 ## 🛠️ Technologies Used
 
